@@ -3,6 +3,12 @@
    background-color: rgb(51, 204, 37);
    padding: 20px;
 }
+.item a {
+   color:white; 
+   text-decoration: none; 
+   font-weight: bold;
+    line-height: 30px; /* Межстрочный интервал   */
+}
 
 .item a:focus {
    color:gold; 
