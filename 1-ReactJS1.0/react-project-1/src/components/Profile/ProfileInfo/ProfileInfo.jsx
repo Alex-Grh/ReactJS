@@ -5,7 +5,7 @@ const ProfileInfo = () => {
    return (
       <div>
          <div>
-            <img src="https://png.pngtree.com/thumb_back/fh260/background/20200714/pngtree-modern-double-color-futuristic-neon-background-image_351866.jpg" />
+            <img src="https://i.pinimg.com/originals/98/24/3b/98243bd48c963ca65580c5b6fb93be1f.jpg" />
          </div>
          <div className={s1.descriptionBlock}>
             ava + description
