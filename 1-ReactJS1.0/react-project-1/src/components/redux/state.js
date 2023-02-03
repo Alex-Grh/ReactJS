@@ -9,7 +9,8 @@ let state = {
          { id: 3, message: 'It\'s my first post 2', likesCount: 11 },
          { id: 4, message: 'It\'s my first post 3', likesCount: 11 },
          { id: 5, message: 'It\'s my first post 4', likesCount: 11 }
-      ]
+      ],
+      newPostText: 'Example'
 
    },
 
@@ -32,16 +33,21 @@ let state = {
    }
 }
 
-export let addPost = (postMessage) => {
+export let addPost = () => {
    let newPost = {
       id: 5,
-      message: postMessage,
+      message: state.profilePage.newPostText,
       likesCount : 0
    };
    state.profilePage.posts.push(newPost);
+   state.profilePage.newPostText = '';
    rerenderEntireTree (state);
 }
 
+export let updateNewPostText = (newText) => {   
+   state.profilePage.newPostText = newText;
+   rerenderEntireTree (state);
+}
 
 
 export default state;
