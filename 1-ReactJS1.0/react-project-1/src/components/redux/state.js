@@ -1,7 +1,7 @@
 let store = {
    _state: {
       profilePage: {
-   
+
          posts: [
             { id: 1, message: 'Hi, how are you?', likesCount: 12 },
             { id: 2, message: 'It\'s my first post 1', likesCount: 11 },
@@ -10,11 +10,11 @@ let store = {
             { id: 5, message: 'It\'s my first post 4', likesCount: 11 }
          ],
          newPostText: 'Example'
-   
+
       },
-   
+
       dialogsPage: {
-   
+
          dialogs: [
             { id: 1, name: 'Jack' },
             { id: 2, name: 'Harry' },
@@ -23,7 +23,7 @@ let store = {
             { id: 5, name: 'Thomas' },
             { id: 6, name: 'George' }
          ],
-   
+
          messages: [
             { id: 1, message: 'Hello!' },
             { id: 2, message: 'We study here' },
@@ -31,28 +31,29 @@ let store = {
          ]
       }
    },
-   getState() {
-      return this._state;
-   },
    _callSubscriber() {
       console.log('State changed');
    },
-   addPost () {
-      let newPost = {
-         id: 5,
-         message: this._state.profilePage.newPostText,
-         likesCount : 0
-      };
-      this._state.profilePage.posts.push(newPost);
-      this._state.profilePage.newPostText = '';
-      this._callSubscriber(this._state);
-   }, 
-   updateNewPostText (newText) {   
-      this._state.profilePage.newPostText = newText;
-      this._callSubscriber(this._state);
+   getState() {
+      return this._state;
    },
-   subscribe (observer){
+   subscribe(observer) {
       this._callSubscriber = observer; // observer
+   },
+    dispatch(action) { // type: 'ADD-POST'
+      if (action.type === 'ADD-POST') {
+         let newPost = {
+            id: 5,
+            message: this._state.profilePage.newPostText,
+            likesCount: 0
+         };
+         this._state.profilePage.posts.push(newPost);
+         this._state.profilePage.newPostText = '';
+         this._callSubscriber(this._state);
+      } else if (action.type === 'UPDATE-NEW-POST-TEXT') {
+         this._state.profilePage.newPostText = action.newText;
+         this._callSubscriber(this._state);
+      }
    }
 }
 
