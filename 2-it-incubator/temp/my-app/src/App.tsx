@@ -5,16 +5,17 @@ import './App.css';
 // можно было определить как function expression пример const App = function() {}
 // можно было сделать функцию стрелочной const App = () => {}
 
-function hello(){
-   
+function hello(){   
    alert ('Hello')
 }
-hello();
+// hello();
 
 function App() {
   return (
     <div>
      This is App component 
+     <Rating/>
+     <Accordion/>
     </div>
   );
 }
@@ -22,12 +23,19 @@ function App() {
 function Rating() {
    return (
       <div>
-      <div>strar</div>
-      <div>strar</div>
-      <div>strar</div>
-      <div>strar</div>
-      <div>strar</div>
+      <Star/>
+      <Star/>
+      <Star/>
+      <Star/>
+      <Star/>
+      <Star/>
       </div>
+   )
+}
+
+function Star(){
+   return(
+      <div>star</div> 
    )
 }
 
