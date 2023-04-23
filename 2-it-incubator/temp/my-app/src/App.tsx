@@ -2,6 +2,8 @@ import React from 'react';
 import './App.css';
 import Accordion from './components/Accordion/Accordion';
 import { Rating } from './components/Reting/Rating';
+import OnOffclick from './components/OnOff/OnOff';
+
 
 // функция определена способом function declaration function App() {}
 // можно было определить как function expression пример const App = function() {}
@@ -29,7 +31,10 @@ function App() {
          <Rating value={3} />
          <Rating value={4} />
          <Rating value={5} />
-      </div>
+         <OnOffclick click={true}/>
+         <OnOffclick click={false}/>         
+         
+      </div>      
    );
 }
 
