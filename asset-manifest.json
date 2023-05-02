@@ -1,0 +1,17 @@
+{
+  "files": {
+    "main.css": "/ReactJS/0-Homework/1-Monday/1-week/3-hw-autocheck/my-app/static/css/main.5774362f.css",
+    "main.js": "/ReactJS/0-Homework/1-Monday/1-week/3-hw-autocheck/my-app/static/js/main.0b9c9c74.js",
+    "static/js/787.66cb4309.chunk.js": "/ReactJS/0-Homework/1-Monday/1-week/3-hw-autocheck/my-app/static/js/787.66cb4309.chunk.js",
+    "static/media/avatar1.png": "/ReactJS/0-Homework/1-Monday/1-week/3-hw-autocheck/my-app/static/media/avatar1.26a3ba0f0f20c2a7ff2a.png",
+    "static/media/avatar.png": "/ReactJS/0-Homework/1-Monday/1-week/3-hw-autocheck/my-app/static/media/avatar.d947cb9d0d13765666b6.png",
+    "index.html": "/ReactJS/0-Homework/1-Monday/1-week/3-hw-autocheck/my-app/index.html",
+    "main.5774362f.css.map": "/ReactJS/0-Homework/1-Monday/1-week/3-hw-autocheck/my-app/static/css/main.5774362f.css.map",
+    "main.0b9c9c74.js.map": "/ReactJS/0-Homework/1-Monday/1-week/3-hw-autocheck/my-app/static/js/main.0b9c9c74.js.map",
+    "787.66cb4309.chunk.js.map": "/ReactJS/0-Homework/1-Monday/1-week/3-hw-autocheck/my-app/static/js/787.66cb4309.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.5774362f.css",
+    "static/js/main.0b9c9c74.js"
+  ]
+}
