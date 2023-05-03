@@ -1,11 +1,27 @@
 .App {
-    --header_height: 60px;
+   --header_height: 60px;
+   padding: 100px 0;
+   width: 1200px;
+   margin: 0 auto;
 }
-
 .hw {
-
+   margin: 24px 0;
+   display: flex;
+   flex-direction: column;
+}
+.hw > div{
 }
 
 .hwTitle {
+   margin-bottom: 10px;
+   font-family: 'Montserrat', sans-serif;
+   font-weight: 600;
+   font-size: 22px;
+   line-height: 27px;
+}
 
+.messageWindow {
+   align-content: flex-start;
+   display: grid;
+   row-gap: 45px;
 }
