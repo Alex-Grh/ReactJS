@@ -1,8 +1,9 @@
-import React from 'react';
+import React, { FC } from 'react';
 
 type TodoListPropsType = {
    title: string
    tasks: TaskType[]
+   removeTask: (taskId: number) => void
 }
 
 export type TaskType = {
@@ -11,23 +12,26 @@ export type TaskType = {
    isDone: boolean
 }
 
-const TodoList = (props: TodoListPropsType) => {
-   console.log(props);
+const TodoList: FC<TodoListPropsType> = ({ tasks, title, removeTask }) => {
+   const tasksJSX: Array<JSX.Element> = tasks.map((task) => {
+      return (
+         <li key={task.id}>
+            <input type='checkbox' checked={task.isDone} />
+            <span>{task.title}</span>
+            <button onClick={() => removeTask(task.id)}>X</button>
+         </li>
+      )
+   })
    return (
       <div>
          <div className='todolist'>
-            <h3>{props.title}</h3>
+            <h3>{title}</h3>
             <div>
                <input />
                <button>+</button>
             </div>
             <ul>
-               <li><input type='checkbox' checked={props.tasks[0].isDone} />
-                  <span>{props.tasks[0].title}</span></li>
-               <li><input type='checkbox' checked={props.tasks[1].isDone} />
-                  <span>{props.tasks[1].title}</span></li>
-               <li><input type='checkbox' checked={props.tasks[2].isDone} />
-                  <span>{props.tasks[2].title}</span></li>
+               {tasksJSX}
             </ul>
 
             <div>
