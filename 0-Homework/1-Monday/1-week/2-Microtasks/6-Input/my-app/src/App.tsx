@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import './App.css';
-import { FullInput } from './components/FullInput';
+// import { FullInput } from './components/FullInput';
 import { Input } from './components/Input';
 import { Button } from './components/Button';
 
