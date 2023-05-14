@@ -4,8 +4,8 @@ import MyPosts from './MyPosts/MyPosts';
 
 const Profile = () => {
    return (
-      <div className={s.content}>
-         <div>
+      <div>
+         <div className={s.picture}>
             <img src="https://pibig.info/uploads/posts/2022-11/1669713041_4-pibig-info-p-neitralnie-oboi-na-rabochii-stol-vkontakte-4.png" alt="" />
          </div>
          <div>

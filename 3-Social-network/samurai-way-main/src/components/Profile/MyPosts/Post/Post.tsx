@@ -11,7 +11,9 @@ const Post = (props: PostType) => {
       <div className={s.item}>
          <img src="https://i.pinimg.com/236x/5e/0b/97/5e0b978aeaf345a4d0dc94f551e49a59.jpg" alt="" />
          {props.message}
-         <div><span>like {props.likesCount}</span></div>
+         <div>
+            <span>like </span> {props.likesCount}
+            </div>
       </div>
    )
 }
