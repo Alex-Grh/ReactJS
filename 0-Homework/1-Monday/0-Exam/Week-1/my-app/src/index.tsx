@@ -217,9 +217,9 @@
 
 // export const YoutubeVideo = (props: any) => {
 //     return <div>
-//         <VideoHeader videoName={props.videoName} />
-//         <VideoContent videoContent={props.videoContent} />
-//         <VideoDescription videoDescription={props.videoDescription} />
+//         <VideoHeader videoName={props.video.videoName} />
+//         <VideoContent videoContent={props.video.videoContent} />
+//         <VideoDescription videoDescription={props.video.videoDescription} />
 //     </div>
 // }
 
@@ -241,7 +241,7 @@
 
 //! Неправильно videoName={props.videoName} videoContent={props.videoContent} videoDescription={props.videoDescription}
 
-
+//! Проверить videoName={props.video.videoName} videoContent={props.video.videoContent} videoDescription={props.video.videoDescription}
 
 //! 9
 // Что нужно написать вместо XXX YYY ZZZ? Ответ дайте через пробел
