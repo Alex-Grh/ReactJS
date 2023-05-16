@@ -185,8 +185,8 @@
 // }
 
 
-// wallets[0]
-// wallets[1]
+// wallets[0] wallets[1]
+
 
 
 //! 8 
@@ -239,7 +239,7 @@
 
 
 
-// Неправильно videoName={props.videoName} videoContent={props.videoContent} videoDescription={props.videoDescription}
+//! Неправильно videoName={props.videoName} videoContent={props.videoContent} videoDescription={props.videoDescription}
 
 
 

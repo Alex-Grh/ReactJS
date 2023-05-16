@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import logo from './logo.svg';
 import './App.css';
 import { TaskType, Todolist } from './Todolist';
+import { v1 } from 'uuid';
 
 
 export type FilterValuesType = "all" | "completed" | "active";
@@ -9,15 +10,15 @@ export type FilterValuesType = "all" | "completed" | "active";
 function App() {
 
    let [tasks, setTasks] = useState<TaskType[]>([
-      { id: 1, title: "CSS&HTML", isDone: true },
-      { id: 2, title: "JS", isDone: false },
-      { id: 3, title: "React", isDone: true },
-      { id: 4, title: "Redux", isDone: false },
+      { id: v1(), title: "CSS&HTML", isDone: true },
+      { id: v1(), title: "JS", isDone: false },
+      { id: v1(), title: "React", isDone: true },
+      { id: v1(), title: "Redux", isDone: false },
    ]);
 
    let [filter, setFilter] = useState<FilterValuesType>('all')
 
-   function removeTask(id: number) {
+   function removeTask(id: string) {
       let filteredTasks = tasks.filter(t => t.id !== id)
       setTasks(filteredTasks);
    }
