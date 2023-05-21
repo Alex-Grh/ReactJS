@@ -1,0 +1,46 @@
+.counter {
+   
+   background-color:rgb(66, 66, 66);
+   width:300px;
+   margin:0 auto;
+   border: 5px solid rgb(2, 247, 255);
+   height: 300px;
+   padding: 20px;
+  
+}
+
+.result {
+   color: rgb(34, 33, 33);
+   font-family: Helvetica, Arial, sans-serif;
+   font-size: 35px;
+   font-weight: bold;
+   border-radius: 10px;
+   background-color:rgb(2, 247, 255);
+}
+
+.resultNumber {
+   color: red;
+   font-family: Helvetica, Arial, sans-serif;
+   font-size: 40px;
+   font-weight: bold;
+ 
+}
+
+.buttonNum{
+border:2px solid rgb(2, 247, 255);
+border-radius: 10px;
+display: flex;
+flex-direction: row;
+justify-content: content;
+align-items: center;
+gap:20px;
+padding: 20px;
+}
+
+.counterScreen {
+   
+   background-color:rgb(2, 247, 255);
+   border-radius: 10px;
+   padding: 30px;
+   margin-bottom:30px;
+}

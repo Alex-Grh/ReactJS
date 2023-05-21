@@ -1,0 +1,9 @@
+.button{
+   background-color:rgb(2, 247, 255);
+   padding: 10px;
+   border-radius: 10px;
+   font-family: Helvetica, Arial, sans-serif;
+   font-size: 25px;
+   font-weight: bold;
+   border-radius: 10px;
+}
