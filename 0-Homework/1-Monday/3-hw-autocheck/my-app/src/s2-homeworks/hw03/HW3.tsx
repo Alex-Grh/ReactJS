@@ -23,7 +23,7 @@ export type UserType = {
    name: string // need to fix any
 }
 // уровень работы с глобальными данными
-export const pureAddUserCallback = (name: string, setUsers: any, users: UserType[]) => { // need to fix any
+export const pureAddUserCallback = (name: string, setUsers: (users: Array<UserType>) => void, users: UserType[]) => { // need to fix any
    const user = { // need to fix
       _id: v1(), // добавляем id
       name, //чтобы неписать name: name пользуемся сокращенной записью
@@ -40,7 +40,7 @@ const HW3 = () => {
 
    return (
       <div id={'hw3'}>
-         <div className={s2.hwTitle}>Homework №3-1</div>
+         <div className={s2.hwTitle}>Homework №3</div>
          {/*для автоматической проверки дз (не менять)*/}
 
          <div className={s2.hw}>

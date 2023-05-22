@@ -9,26 +9,26 @@ type GreetingContainerPropsType = {
 
 export const pureAddUser = (name: string, setError: (error: string) => void, setName: (name: string) => void, addUserCallback: (name: string) => void) => {
 
-   if (!name.trim()) {
-       setError('Ошибка! Введите имя!')
+   if (!name) {
+      setError('Ошибка! Введите имя!')
    } else {
-       addUserCallback(name)
-       setName('')
-           }
-       // если имя пустое - показать ошибку, иначе - добавить юзера и очистить инпут
+      addUserCallback(name)
+      setName('')
+   }
+   // если имя пустое - показать ошибку, иначе - добавить юзера и очистить инпут
 }
 
 export const pureOnBlur = (name: string, setError: (error: string) => void) => { // если имя пустое - показать ошибку
 
-   if (!name.trim()) {
-       setError('Ошибка! Введите имя!')
+   if (!name) {
+      setError('Ошибка! Введите имя!')
    }
 }
 
 export const pureOnEnter = (e: React.KeyboardEvent<HTMLInputElement>, addUser: () => void) => { // если нажата кнопка Enter - добавить
 
    if (e.key === 'Enter') {
-       return addUser()
+      addUser()
    }
 }
 
@@ -45,14 +45,8 @@ const GreetingContainer: React.FC<GreetingContainerPropsType> = ({
    const [error, setError] = useState<string>('') // need to fix any
 
    const setNameCallback = (e: ChangeEvent<HTMLInputElement>) => { // need to fix any
-      const trimmedName = e.currentTarget.value.trim()
-      if (trimmedName) {
-         setName(trimmedName)
-        error && setError('')
-      } else {
-        name && setName('')
-         setError('name is require!')
-      }
+      setName(e.currentTarget.value) // need to fix
+      error && setError('')
    }
    const addUser = () => {
       pureAddUser(name, setError, setName, addUserCallback)
@@ -67,7 +61,7 @@ const GreetingContainer: React.FC<GreetingContainerPropsType> = ({
    }
 
    const totalUsers = users.length // need to fix
-   const lastUserName =  totalUsers > 0 ? users[users.length-1].name : ''// need to fix
+   const lastUserName = users.length > 0 ? users[users.length - 1].name : '' // need to fix
 
    return (
       <Greeting
