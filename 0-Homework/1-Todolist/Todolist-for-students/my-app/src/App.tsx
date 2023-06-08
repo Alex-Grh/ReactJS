@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import './App.css';
 import { TaskType, Todolist } from './Todolist';
 import { v1 } from 'uuid';
+import { AddItemForm } from './AddItemForm';
 
 
 export type FilterValuesType = "all" | "completed" | "active";
@@ -27,17 +28,17 @@ function App() {
       let tasks = tasksObj[todolistId];
       let newTasks = [task, ...tasks];
       tasksObj[todolistId] = newTasks
-      setTasks({...tasksObj});
+      setTasks({ ...tasksObj });
    }
 
    function changeStatus(taskId: string, isDone: boolean, todolistId: string) {
       let tasks = tasksObj[todolistId];
       let task = tasks.find(t => t.id === taskId)
       if (task) {
-         task.isDone = isDone;        
-         setTasks({...tasksObj});
+         task.isDone = isDone;
+         setTasks({ ...tasksObj });
       }
-     
+
    }
 
 
@@ -54,15 +55,15 @@ function App() {
    let todolistId2 = v1();
 
    let [todolists, setTodolist] = useState<Array<TodolistType>>([
-      { id: todolistId1, title: "What to learn", filter: "active" },
-      { id: todolistId2, title: "What to buy", filter: "completed" },
+      { id: todolistId1, title: "What to learn", filter: "all" },
+      { id: todolistId2, title: "What to buy", filter: "all" },
    ]);
 
    let removeTodolist = (todolistId: string) => {
       let filteredTodolist = todolists.filter(tl => tl.id !== todolistId)
       setTodolist(filteredTodolist);
       delete tasksObj[todolistId];
-      setTasks({...tasksObj});
+      setTasks({ ...tasksObj });
    }
 
    let [tasksObj, setTasks] = useState({
@@ -81,6 +82,7 @@ function App() {
 
    return (
       <div className="App">
+         <AddItemForm addItem={(title: string) => { alert(title) }} />
          {
             todolists.map((tl) => {
                let tasksForTodolist = tasksObj[tl.id];
@@ -101,7 +103,7 @@ function App() {
                   addTask={addTask}
                   changeTaskStatus={changeStatus}
                   filter={tl.filter}
-                  removeTodolist = {removeTodolist}
+                  removeTodolist={removeTodolist}
                />
             })
          }
