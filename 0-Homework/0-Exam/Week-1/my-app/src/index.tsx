@@ -241,7 +241,7 @@
 
 //! Неправильно videoName={props.videoName} videoContent={props.videoContent} videoDescription={props.videoDescription}
 
-//! Проверить videoName={props.video.videoName} videoContent={props.video.videoContent} videoDescription={props.video.videoDescription}
+//! Неправильно videoName={props.video.videoName} videoContent={props.video.videoContent} videoDescription={props.video.videoDescription}
 
 //! 9
 // Что нужно написать вместо XXX YYY ZZZ? Ответ дайте через пробел

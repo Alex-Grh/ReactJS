@@ -2,7 +2,7 @@ import React, { ChangeEvent, KeyboardEvent, useState } from "react";
 import { FilterValuesType } from "./App";
 
 type AddItemFormPropsType = {
-   addItem: (title: string) => void   
+   addItem: (title: string) => void
 }
 export function AddItemForm(props: AddItemFormPropsType) {
    const [title, setTitle] = useState('');
