@@ -1,8 +1,12 @@
 import React from 'react';
 import s from './MyPosts.module.css';
 import Post from './Post/Post';
+import { state } from '../../redux/state';
 
 const MyPosts = () => {
+
+   let postsElements = state.profilePage.postData
+   .map(p => <Post message={p.message} likesCount={p.likesCount} />)
    return (
       <div className={s.postsBlock}>
          <h3>My post</h3>
@@ -15,9 +19,7 @@ const MyPosts = () => {
             </div>
          </div>
          <div className={s.posts}>
-            <Post message='Hi, how are you?' likesCount={10} />
-            <Post message='Its my first post' likesCount={15} />
-
+           {postsElements}
          </div>
       </div>
    )
